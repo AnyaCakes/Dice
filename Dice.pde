@@ -7,12 +7,18 @@ void setup()
 void draw()
 {
 	background(0);
+	int totes=0;
 	for(int y=0; y<400; y+=50){
 		for(int x=0; x<400; x+=50){	
 			dood=new Die(x,y);
 			dood.show();
+			totes+=dood.integer;
 }
 }
+fill(255,0,0);
+textSize(20);
+textAlign(CENTER,CENTER);
+text(totes, 200,195);
 }
 void mousePressed()
 {
